@@ -119,8 +119,7 @@ a {
 //Стили для верхнего блока сайта
 .top {
    background-color: #f1e4e6;
-   display: flex;
-   align-items: center;
+   @include centerFlex;
    gap: 64px;
    &__photo {
       margin-left: -220px;
@@ -153,7 +152,8 @@ a {
    margin-top: 64px;
    margin-bottom: 97px;
    &__box {
-      @include centerFlex;
+      display: grid;
+      grid-template-columns: repeat(3, mminmax(232px, 360px));
       gap: $gapGrid;
    }
    &__item {
@@ -242,7 +242,6 @@ a {
    width: $thirdSite;
    display: flex;
    flex-direction: column;
-   text-align: left;
    &__box {
       @include centerFlex;
       gap: $gapGrid;

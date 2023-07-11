@@ -9,16 +9,12 @@
    display: flex;
    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
    margin-bottom: 40px;
-   &__head {
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-   }
+   position: relative;
    &__image {
       width: 262px;
    }
    &__info {
-      width: 390px;
+      width: 360px;
       padding: 31px 22px 22px;
       box-sizing: border-box;
       display: flex;
@@ -68,7 +64,7 @@
    }
    &__close {
       position: absolute;
-      right: 0;
+      right: 20px;
       &:hover path {
          fill: $mainColor;
          transition: $transition;
@@ -76,8 +72,7 @@
    }
    &__button {
       padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
+      @include flexBetween;
       &-style {
          padding: 17px 40px;
          background: none;
